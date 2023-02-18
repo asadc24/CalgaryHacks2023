@@ -3,6 +3,7 @@ import login_page from "./pages/LoginPage"
 import HomePage from './pages/HomePage'
 import Navbar from './components/Navbar';
 import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <div className='content'>
           <Routes>
             <Route exact path='/' element={<LoginPage/>} />
+            <Route exact path='/signup' element={<SignupPage/>} />
             <Route exact path='/home' element={<HomePage/>} />
           </Routes>
         </div>
