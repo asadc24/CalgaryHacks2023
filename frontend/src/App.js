@@ -1,15 +1,21 @@
-import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import login_page from "./pages/login_page"
+import HomePage from './pages/HomePage'
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/login" element={<login_page />} />
-    </Routes>
-  </BrowserRouter>
+    <div className='App'>
+      <Router>
+        <Navbar/>
+        <div className='content'>
+          <Routes>
+            <Route exact path='/' element={<HomePage/>} />
+          </Routes>
+        </div>
+      </Router>
+    </div>
+
   );
 }
 
