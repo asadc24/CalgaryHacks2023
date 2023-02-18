@@ -14,6 +14,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-black">
       <Link to={"/"} onClick={() => setDropDown(false)}>
+        <h2>UofC Central</h2>
       </Link>
       <ul className="hidden md:flex">
         <Link to={"/"} onClick={() => setDropDown(false)}>
