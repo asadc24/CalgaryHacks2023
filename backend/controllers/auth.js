@@ -1,5 +1,7 @@
 const Users = require("../models/user");
 const bcrypt = require('bcrypt')
+const jwt = require("jsonwebtoken")
+
 
 const authController = {
     register: async (req, res) => {
@@ -14,6 +16,8 @@ const authController = {
                 email: email,
                 password: passwordHash
             })
+            const accessToken = createAccessToken({ id: newUser._id })
+            const refreshToken = createRefreshToken({ id: newUser._id })
             res.cookie('refreshtoken', refreshToken, {
                 httpOnly: true,
                 path: '/api/refresh_token',
@@ -40,6 +44,15 @@ const authController = {
         }
     } 
 
+}
+
+const createAccessToken = (payload) => {
+    return jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1d' })
+}
+
+
+const createRefreshToken = (payload) => {
+    return jwt.sign(payload, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '30d' })
 }
 
 

@@ -4,4 +4,7 @@ const registerMiddleware = require('../middleware/signup.js');
 
 const authRoute = Router()
 
-authRoute.post('/register',  authController.register);
+authRoute.post('/register',  registerMiddleware, authController.register);
+
+module.exports = authRoute
+
