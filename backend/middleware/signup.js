@@ -1,4 +1,4 @@
-import Users from "../models/user.js"
+const Users = require( "../models/user.js")
 
 const registerMiddleware = (async (req, res, next) => {
     const { username, email } = req.body
@@ -14,4 +14,4 @@ const registerMiddleware = (async (req, res, next) => {
     next()
 })
 
-export default registerMiddleware;
+module.exports = registerMiddleware

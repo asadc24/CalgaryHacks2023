@@ -1,5 +1,5 @@
-import Users from "../models/user";
-import bcrypt from 'bcrypt'
+const Users = require("../models/user");
+const bcrypt = require('bcrypt')
 
 const authController = {
     register: async (req, res) => {
@@ -43,4 +43,4 @@ const authController = {
 }
 
 
-export default authController
+module.exports = authController

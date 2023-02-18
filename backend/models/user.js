@@ -1,4 +1,4 @@
-import pkg from 'mongoose'
+const pkg = require('mongoose')
 const { model, models, Schema, Types } = pkg
 
 const userSchema = new Schema({
@@ -27,5 +27,5 @@ const userSchema = new Schema({
 
 const Users = models.Users || model("Users", userSchema)
 
-export default Users;
+module.exports = Users
 
