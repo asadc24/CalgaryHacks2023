@@ -2,6 +2,12 @@ import React , {useState} from "react";
 import './LoginPage.css'
 
 const LoginPage = () => {
+
+    const [username, setUserName] = useState('')
+    const [password, setPassword] = useState('')
+
+    
+
   return (
     <section class="bg-gray-5 grid grid-cols-2 gap-0">
     <div class="w-full flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
