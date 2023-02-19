@@ -1,4 +1,5 @@
 import React , {useState} from "react";
+import './LoginPage.css'
 
 const LoginPage = () => {
   return (
@@ -40,9 +41,7 @@ const LoginPage = () => {
             </div>
         </div>
     </div>
-    <div class="bg-gradient-to-r from-cyan-500 to-blue-500">
-      <img class="bg-gradient-to-r from-cyan-500 to-blue-500 z-10 h-full" src={require('../img/campus.jpg')} alt="img"/>
-    </div>
+    <div class="w-full h-full" id="bg_img"></div>
   </section>
   )
 }
