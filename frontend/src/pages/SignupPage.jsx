@@ -35,8 +35,8 @@ const SignupPage = () => {
 
 
   return (
-    <section class="bg-gray-50 dark:bg-gray-900">
-        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+    <section class="bg-gray-50 dark:bg-gray-900 grid grid-cols-2">
+        <div class="w-full flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
                 <img class="w-8 h-8 mr-2" src={require('../img/uofcLogo.png')} alt="img"/>
                 UofC Central    
@@ -72,6 +72,7 @@ const SignupPage = () => {
             </div>
         </div>
     </div>
+    <div class="w-full h-full" id="bg_img"></div>
     </section>
   )
 }

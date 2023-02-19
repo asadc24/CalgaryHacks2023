@@ -38,3 +38,11 @@
     font-weight: 600;
     color: rgb(34, 34, 34);
   }
+
+  #bg_img {
+    background-image:
+    linear-gradient(to left, rgba(255,0,0,0), rgb(255, 255, 255,0.6)),
+    url('../img/campus.jpg');
+    background-size: cover;
+    color: white;
+}
